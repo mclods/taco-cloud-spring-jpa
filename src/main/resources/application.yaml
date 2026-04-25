@@ -1,3 +1,17 @@
 spring:
   application:
     name: taco-cloud-spring-jpa
+  datasource:
+    url: jdbc:h2:mem:tacocloud;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH
+    generate-unique-name: false
+    name: tacocloud
+  sql:
+    init:
+      mode: always
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+    defer-datasource-initialization: true
